@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas id="test" width="500" height="500"></canvas>
+</body>
+<script type="text/javascript">
+	
+	(function(){
+
+
+		var canvas = document.getElementById("test");
+
+		var context = canvas.getContext("2d");
+
+		var duration = 1500;
+		
+		var t = 0;
+		
+		var lastTime = Date.now();
+		
+		var reserve = true;
+
+		function draw(t){
+
+			var radius = 50;
+
+			var x = 100,y = 100;
+
+			t = reserve ? t : 1-t;
+
+			t = Math.cos(t);
+
+			context.fillStyle = "red";
+
+			context.clearRect(0,0,500,500);
+
+			context.beginPath();
+
+			context.arc(x,y,radius * t, 0 , Math.PI * 2);
+
+			context.fill();
+
+		}
+		
+		animate();
+
+		function animate(){
+
+			var time  = Date.now();
+
+			var t = (time - lastTime) / duration;
+
+			if(t > 1){
+				t = 0;
+				lastTime = time;
+				reserve = !reserve;
+			}
+
+			draw(t);
+
+			requestAnimationFrame(animate);
+
+		}
+
+	})();
+
+</script>
+</html>

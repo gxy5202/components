@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="frequency3.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="frequencyAnimation.js" defer="defer" type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="control">
+        <div>
+            <label for="minHeight">音符最小高度</label>
+            <input class="control-bar" id="minHeight" type="number" min="0" max="999" value="30">
+        </div>
+        <div>
+            <label for="maxHeight">音符最大高度</label>
+            <input class="control-bar" id="maxHeight" type="number" min="0" max="999" value="200">
+        </div>
+        <div>
+            <label for="width">音符宽度</label>
+            <input class="control-bar" id="width" type="number" min="0" max="999" value="10">
+        </div>
+        <div>
+            <label for="align">音符对齐方式</label>
+            <select class="control-bar" id="align" >
+                <option value="center">居中对齐</option>
+                <option value="flex-end" selected="true">居下对齐</option>
+            </select>
+        </div>
+        <div>
+            <label for="dis">音符间距</label>
+            <input class="control-bar" id="dis" type="number" min="1" max="999" value="10">
+        </div>
+        <div>
+            <label for="num">音符数量</label>
+            <input class="control-bar" id="num" type="number" min="1" max="999" value="60">
+        </div>
+        <div>
+            <label for="radius">音符圆弧</label>
+            <input class="control-bar" id="radius" type="number" min="0" max="99" value="0">
+        </div>
+        <div class="colorBox">
+            <label for="color">音符颜色</label>
+            <input class="control-bar" id="color1" type="color" value="#ff0080">
+            <input class="control-bar" id="color2" type="color" value="#ff0080">
+            <input class="control-bar" id="color3" type="color" value="#ff0080">
+        </div>
+        <div>
+            <label for="speed">动画速度</label>
+            <input class="control-bar" id="speed" type="range" min="150" max="1000" value="200">
+        </div>
+        <button id="close">关闭</button>
+    </div>
+</body>
+    <script type="module">
+       
+
+    </script>
+</html>

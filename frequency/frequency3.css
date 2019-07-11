@@ -1,0 +1,18 @@
+html,body {
+    height: 100%;
+    background: black;
+}
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 1500px;
+    height: 500px;
+    border: 1px solid rgb(228, 18, 18);
+}
+.control {
+    position: absolute;
+    left:1000px;
+    color:white
+}
